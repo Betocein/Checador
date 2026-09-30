@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "Checador",
+    "slug": "app-movil-checador",
+    "scheme": "checador",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "backgroundColor": "#FAF8F7"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Necesitamos tu cámara frontal para verificar tu rostro al checar entrada/salida.",
+        "NSFaceIDUsageDescription": "Usamos Face ID como candado local antes de abrir la cámara del checador."
+      }
+    },
+    "android": {
+      "package": "com.checador.app",
+      "permissions": ["CAMERA", "USE_BIOMETRIC", "USE_FINGERPRINT"],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#5B21B6"
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Necesitamos tu cámara frontal para verificar tu rostro al checar."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "buildToolsVersion": "34.0.0"
+          }
+        }
+      ]
+    ]
+  }
+}

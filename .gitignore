@@ -1,0 +1,33 @@
+# Dependencias
+node_modules/
+
+# Cache de Metro / Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Secrets: el .env real nunca se sube, solo el .env.example
+.env
+.env.local
+.env*.local
+!.env.example
+
+# Artefactos de build de Android (el resto de android/ SI se sube,
+# hace falta para compilar con el SDK configurado a mano)
+android/.gradle/
+android/.cxx/
+android/app/build/
+android/build/
+android/local.properties
+*.apk
+*.aab
+*.keystore
+!debug.keystore
+
+# Editores / sistema operativo
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
